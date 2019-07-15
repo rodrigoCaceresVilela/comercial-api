@@ -1,0 +1,74 @@
+{
+  "groups": [
+    {
+      "name": "comercialapi",
+      "type": "br.com.rcv.comercial.config.property.ApiProperty",
+      "sourceType": "br.com.rcv.comercial.config.property.ApiProperty"
+    },
+    {
+      "name": "comercialapi.cors-origin",
+      "type": "br.com.rcv.comercial.config.property.ApiProperty$CorsOrigin",
+      "sourceType": "br.com.rcv.comercial.config.property.ApiProperty",
+      "sourceMethod": "public br.com.rcv.comercial.config.property.ApiProperty.CorsOrigin getCorsOrigin() "
+    },
+    {
+      "name": "comercialapi.seguranca",
+      "type": "br.com.rcv.comercial.config.property.ApiProperty$Seguranca",
+      "sourceType": "br.com.rcv.comercial.config.property.ApiProperty",
+      "sourceMethod": "public br.com.rcv.comercial.config.property.ApiProperty.Seguranca getSeguranca() "
+    }
+  ],
+  "properties": [
+    {
+      "name": "comercialapi.cors-origin.origin-permitida",
+      "type": "java.lang.String",
+      "sourceType": "br.com.rcv.comercial.config.property.ApiProperty$CorsOrigin"
+    },
+    {
+      "name": "comercialapi.cors-origin.origin-permitida",
+      "type": "java.lang.String",
+      "sourceType": "br.com.rcv.comercial.config.property.ApiProperty$CorsOrigin"
+    },
+    {
+      "name": "comercialapi.cors-origin.origin-permitida",
+      "type": "java.lang.String",
+      "sourceType": "br.com.rcv.comercial.config.property.ApiProperty$CorsOrigin"
+    },
+    {
+      "name": "comercialapi.cors-origin.origin-permitida",
+      "type": "java.lang.String",
+      "sourceType": "br.com.rcv.comercial.config.property.ApiProperty$CorsOrigin"
+    },
+    {
+      "name": "comercialapi.seguranca.enable-https",
+      "type": "java.lang.Boolean",
+      "sourceType": "br.com.rcv.comercial.config.property.ApiProperty$Seguranca"
+    },
+    {
+      "name": "comercialapi.seguranca.enable-https",
+      "type": "java.lang.Boolean",
+      "sourceType": "br.com.rcv.comercial.config.property.ApiProperty$Seguranca"
+    },
+    {
+      "name": "comercialapi.seguranca.enable-https",
+      "type": "java.lang.Boolean",
+      "sourceType": "br.com.rcv.comercial.config.property.ApiProperty$Seguranca"
+    },
+    {
+      "name": "comercialapi.seguranca.enable-https",
+      "type": "java.lang.Boolean",
+      "sourceType": "br.com.rcv.comercial.config.property.ApiProperty$Seguranca"
+    },
+    {
+      "name": "comercialapi.seguranca.enable-https",
+      "type": "java.lang.Boolean",
+      "sourceType": "br.com.rcv.comercial.config.property.ApiProperty$Seguranca"
+    },
+    {
+      "name": "comercialapi.seguranca.enable-https",
+      "type": "java.lang.Boolean",
+      "sourceType": "br.com.rcv.comercial.config.property.ApiProperty$Seguranca"
+    }
+  ],
+  "hints": []
+}
