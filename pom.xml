@@ -109,6 +109,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+	                <mainClass>br.com.rcv.comercial.ComercialApiApplication</mainClass>
+	            </configuration>
 			</plugin>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
