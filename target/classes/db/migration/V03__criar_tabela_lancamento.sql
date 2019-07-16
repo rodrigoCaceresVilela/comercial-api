@@ -14,4 +14,4 @@ CREATE TABLE lancamento (
 
 INSERT INTO lancamento (descricao, data_vencimento, data_pagamento, valor, observacao, tipo, categoria_id, pessoa_id) 
 VALUES
-('Mouse', CURRENT_DATE, CURRENT_DATE, 115.9, 'Corsair', '', 10, 1);
+('Mouse', CURRENT_DATE, CURRENT_DATE, 115.9, 'Corsair', '', 1, 1);
