@@ -32,6 +32,12 @@ INSERT INTO permissao (descricao) VALUES ('ROLE_CADASTRAR_LANCAMENTO');
 INSERT INTO permissao (descricao) VALUES ('ROLE_PESQUISAR_LANCAMENTO');
 INSERT INTO permissao (descricao) VALUES ('ROLE_REMOVER_LANCAMENTO');
 
-INSERT INTO permissoes_usuarios (usuario_id, permissao_id) 
-VALUES
-(1, 1);
+INSERT INTO permissoes_usuarios (usuario_id, permissao_id) VALUES (1, 1);
+INSERT INTO permissoes_usuarios (usuario_id, permissao_id) values (1, 2);
+INSERT INTO permissoes_usuarios (usuario_id, permissao_id) values (1, 3);
+INSERT INTO permissoes_usuarios (usuario_id, permissao_id) values (1, 4);
+INSERT INTO permissoes_usuarios (usuario_id, permissao_id) values (1, 5);
+INSERT INTO permissoes_usuarios (usuario_id, permissao_id) values (1, 6);
+INSERT INTO permissoes_usuarios (usuario_id, permissao_id) values (1, 7);
+INSERT INTO permissoes_usuarios (usuario_id, permissao_id) values (1, 8);
+INSERT INTO permissoes_usuarios (usuario_id, permissao_id) values (1, 9);
