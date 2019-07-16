@@ -109,11 +109,8 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-	                <mainClass>br.com.rcv.comercial.ComercialApiApplication</mainClass>
-	            </configuration>
 			</plugin>
-			<plugin>
+			<!-- <plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
 					<source>11</source>
@@ -121,7 +118,7 @@
 					<failOnError>false</failOnError>
 					<generatedSourcesDirectory>src/main/java</generatedSourcesDirectory>
 				</configuration>
-			</plugin>
+			</plugin> -->
 		</plugins>
 	</build>
 
