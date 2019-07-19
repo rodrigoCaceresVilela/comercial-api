@@ -88,5 +88,6 @@ public class LancamentoController {
 		List<Erro> erros = Arrays.asList(new Erro(mensagemUsuario, mensagemDesenvolvedor));
 		
 		return ResponseEntity.badRequest().body(erros);
+		
 	}
 }
