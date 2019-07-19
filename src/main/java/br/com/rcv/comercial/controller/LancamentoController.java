@@ -4,24 +4,26 @@ import java.net.URI;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
-
 import javax.validation.Valid;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-
 import br.com.rcv.comercial.controller.ComercialResponseExceptionHandler.Erro;
 import br.com.rcv.comercial.model.Lancamento;
 import br.com.rcv.comercial.repository.LancamentoRepository;
@@ -67,6 +69,15 @@ public class LancamentoController {
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequestUri().path("/{id}").buildAndExpand(lancamentoSalvo.getId()).toUri();
 		
 		return ResponseEntity.created(uri).body(lancamentoSalvo);
+	}
+	
+	@PutMapping("/{id}")
+	public Lancamento update(@PathVariable Long id, @RequestBody Lancamento lancamento) {
+		Lancamento lancamentoAtual = lancamentoRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Lancamento não encontrado."));
+		
+		BeanUtils.copyProperties(lancamento, lancamentoAtual, "id");
+		
+		return lancamentoRepository.saveAndFlush(lancamentoAtual);
 	}
 	
 	@ExceptionHandler({ PessoaInexistenteOuInativaException.class })

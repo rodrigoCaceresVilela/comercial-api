@@ -1,14 +1,13 @@
 package br.com.rcv.comercial.controller;
 
 import java.net.URI;
-import java.util.List;
 import java.util.Optional;
-
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -21,10 +20,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-
 import br.com.rcv.comercial.event.RecursoCriadoEvent;
 import br.com.rcv.comercial.model.Pessoa;
 import br.com.rcv.comercial.repository.PessoaRepository;
+import br.com.rcv.comercial.repository.filter.PessoaFilter;
 import br.com.rcv.comercial.service.PessoaService;
 
 @RestController
@@ -41,8 +40,8 @@ public class PessoaController {
 	private PessoaService pessoaService;
 	
 	@GetMapping
-	public List<Pessoa> findAll() {
-		return pessoaRepository.findAll();
+	public Page<Pessoa> findAll(PessoaFilter pessoaFilter, Pageable pageable) {
+		return pessoaRepository.filtrar(pessoaFilter, pageable);
 	}
 	
 	@GetMapping("/{id}")
@@ -70,7 +69,7 @@ public class PessoaController {
 		pessoaRepository.deleteById(id);
 	}
 	
-	@PutMapping("{id}")
+	@PutMapping("/{id}")
 	public Pessoa atualizar(@PathVariable Long id, @Valid @RequestBody Pessoa pessoa) {
 		return pessoaService.atualizar(id, pessoa);
 	}

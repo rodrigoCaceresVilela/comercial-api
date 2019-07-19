@@ -9,27 +9,25 @@
       "name": "comercialapi.cors-origin",
       "type": "br.com.rcv.comercial.config.property.ApiProperty$CorsOrigin",
       "sourceType": "br.com.rcv.comercial.config.property.ApiProperty",
-      "sourceMethod": "getCorsOrigin()"
+      "sourceMethod": "public br.com.rcv.comercial.config.property.ApiProperty.CorsOrigin getCorsOrigin() "
     },
     {
       "name": "comercialapi.seguranca",
       "type": "br.com.rcv.comercial.config.property.ApiProperty$Seguranca",
       "sourceType": "br.com.rcv.comercial.config.property.ApiProperty",
-      "sourceMethod": "getSeguranca()"
+      "sourceMethod": "public br.com.rcv.comercial.config.property.ApiProperty.Seguranca getSeguranca() "
     }
   ],
   "properties": [
     {
       "name": "comercialapi.cors-origin.origin-permitida",
       "type": "java.lang.String",
-      "sourceType": "br.com.rcv.comercial.config.property.ApiProperty$CorsOrigin",
-      "defaultValue": "http:\/\/localhost:8000"
+      "sourceType": "br.com.rcv.comercial.config.property.ApiProperty$CorsOrigin"
     },
     {
       "name": "comercialapi.seguranca.enable-https",
       "type": "java.lang.Boolean",
-      "sourceType": "br.com.rcv.comercial.config.property.ApiProperty$Seguranca",
-      "defaultValue": false
+      "sourceType": "br.com.rcv.comercial.config.property.ApiProperty$Seguranca"
     }
   ],
   "hints": []

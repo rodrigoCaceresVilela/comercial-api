@@ -2,7 +2,6 @@ package br.com.rcv.comercial.repository.lancamento;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
@@ -10,12 +9,10 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
-
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.util.StringUtils;
-
 import br.com.rcv.comercial.model.Categoria_;
 import br.com.rcv.comercial.model.Lancamento;
 import br.com.rcv.comercial.model.Lancamento_;
