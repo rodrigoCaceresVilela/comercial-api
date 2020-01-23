@@ -12,6 +12,12 @@
       "sourceMethod": "public br.com.rcv.comercial.config.property.ApiProperty.CorsOrigin getCorsOrigin() "
     },
     {
+      "name": "comercialapi.mail",
+      "type": "br.com.rcv.comercial.config.property.ApiProperty$Mail",
+      "sourceType": "br.com.rcv.comercial.config.property.ApiProperty",
+      "sourceMethod": "public br.com.rcv.comercial.config.property.ApiProperty.Mail getMail() "
+    },
+    {
       "name": "comercialapi.seguranca",
       "type": "br.com.rcv.comercial.config.property.ApiProperty$Seguranca",
       "sourceType": "br.com.rcv.comercial.config.property.ApiProperty",
@@ -23,6 +29,26 @@
       "name": "comercialapi.cors-origin.origin-permitida",
       "type": "java.lang.String",
       "sourceType": "br.com.rcv.comercial.config.property.ApiProperty$CorsOrigin"
+    },
+    {
+      "name": "comercialapi.mail.host",
+      "type": "java.lang.String",
+      "sourceType": "br.com.rcv.comercial.config.property.ApiProperty$Mail"
+    },
+    {
+      "name": "comercialapi.mail.password",
+      "type": "java.lang.String",
+      "sourceType": "br.com.rcv.comercial.config.property.ApiProperty$Mail"
+    },
+    {
+      "name": "comercialapi.mail.port",
+      "type": "java.lang.Integer",
+      "sourceType": "br.com.rcv.comercial.config.property.ApiProperty$Mail"
+    },
+    {
+      "name": "comercialapi.mail.username",
+      "type": "java.lang.String",
+      "sourceType": "br.com.rcv.comercial.config.property.ApiProperty$Mail"
     },
     {
       "name": "comercialapi.seguranca.enable-https",
