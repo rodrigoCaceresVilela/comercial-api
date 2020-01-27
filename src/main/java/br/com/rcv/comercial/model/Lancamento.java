@@ -14,6 +14,7 @@ import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 public class Lancamento {
@@ -44,6 +45,7 @@ public class Lancamento {
 	@ManyToOne
 	private Categoria categoria;
 	
+	@JsonIgnoreProperties("contatos")
 	@NotNull
 	@ManyToOne
 	private Pessoa pessoa;
