@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
@@ -19,6 +20,7 @@ import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 
 import br.com.rcv.comercial.model.Lancamento;
+import br.com.rcv.comercial.model.Usuario;
 import br.com.rcv.comercial.repository.LancamentoRepository;
 
 @Component
@@ -45,18 +47,28 @@ public class Mailer {
 //		System.out.println("Término do envio do e-mail:");
 //	}
 	
-	@EventListener
-	private void testeEnvioDeEmailDeLancamentos(ApplicationReadyEvent event) {
+//	@EventListener
+//	private void testeEnvioDeEmailDeLancamentos(ApplicationReadyEvent event) {
+//		String template = "mail/aviso-lancamentos-vencidos";
+//		
+//		List<Lancamento> lancamentos = repo.findAll();
+//		
+//		Map<String, Object> variaveis = new HashMap<>();
+//		variaveis.put("lancamentos", lancamentos);
+//		
+//		this.enviarEmail("rodrigocaceresvilela@yahoo.com.br", 
+//				 Arrays.asList("rodrigocaceresvilela@gmail.com"), 
+//				 "Aviso de lançamentos", template, variaveis);
+//	}
+	
+	public void avisarSobreLancamentosVencidos(List<Lancamento> vencidos, List<Usuario> destinatarios) {
+		Map<String, Object> variaveis = new HashMap<>();
 		String template = "mail/aviso-lancamentos-vencidos";
 		
-		List<Lancamento> lancamentos = repo.findAll();
+		variaveis.put("lancamentos", vencidos);
+		List<String> emails = destinatarios.stream().map(u -> u.getEmail()).collect(Collectors.toList());
 		
-		Map<String, Object> variaveis = new HashMap<>();
-		variaveis.put("lancamentos", lancamentos);
-		
-		this.enviarEmail("rodrigocaceresvilela@yahoo.com.br", 
-				 Arrays.asList("rodrigocaceresvilela@gmail.com"), 
-				 "Aviso de lançamentos", template, variaveis);
+		this.enviarEmail("rodrigocaceresvilela@yahoo.com.br", emails, "Lançamentos Vencidos", template, variaveis);
 	}
 	
 	public void enviarEmail(String remetente, List<String> destinatarios, String assunto, String template, Map<String, Object> variaveis) {

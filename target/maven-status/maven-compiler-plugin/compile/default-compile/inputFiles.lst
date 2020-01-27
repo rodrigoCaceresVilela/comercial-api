@@ -10,6 +10,7 @@ C:\Users\rodri\Desenvolvimento\new_workspace_sts4\comercial-api\src\main\java\br
 C:\Users\rodri\Desenvolvimento\new_workspace_sts4\comercial-api\src\main\java\br\com\rcv\comercial\repository\pessoa\PessoaRepositoryQuery.java
 C:\Users\rodri\Desenvolvimento\new_workspace_sts4\comercial-api\src\main\java\br\com\rcv\comercial\service\LancamentoService.java
 C:\Users\rodri\Desenvolvimento\new_workspace_sts4\comercial-api\src\main\java\br\com\rcv\comercial\util\GerardorDeSenha.java
+C:\Users\rodri\Desenvolvimento\new_workspace_sts4\comercial-api\src\main\java\br\com\rcv\comercial\mail\Mailer.java
 C:\Users\rodri\Desenvolvimento\new_workspace_sts4\comercial-api\src\main\java\br\com\rcv\comercial\repository\lancamento\LancamentoRepositoryQuery.java
 C:\Users\rodri\Desenvolvimento\new_workspace_sts4\comercial-api\src\main\java\br\com\rcv\comercial\event\RecursoCriadoEvent.java
 C:\Users\rodri\Desenvolvimento\new_workspace_sts4\comercial-api\src\main\java\br\com\rcv\comercial\controller\TokenController.java
@@ -26,6 +27,7 @@ C:\Users\rodri\Desenvolvimento\new_workspace_sts4\comercial-api\src\main\java\br
 C:\Users\rodri\Desenvolvimento\new_workspace_sts4\comercial-api\src\main\java\br\com\rcv\comercial\controller\CategoriaController.java
 C:\Users\rodri\Desenvolvimento\new_workspace_sts4\comercial-api\src\main\java\br\com\rcv\comercial\model\Permissao.java
 C:\Users\rodri\Desenvolvimento\new_workspace_sts4\comercial-api\src\main\java\br\com\rcv\comercial\model\Endereco.java
+C:\Users\rodri\Desenvolvimento\new_workspace_sts4\comercial-api\src\main\java\br\com\rcv\comercial\config\MailConfig.java
 C:\Users\rodri\Desenvolvimento\new_workspace_sts4\comercial-api\src\main\java\br\com\rcv\comercial\event\listener\RecursoCriadoListener.java
 C:\Users\rodri\Desenvolvimento\new_workspace_sts4\comercial-api\src\main\java\br\com\rcv\comercial\repository\filter\LancamentoFilter.java
 C:\Users\rodri\Desenvolvimento\new_workspace_sts4\comercial-api\src\main\java\br\com\rcv\comercial\config\property\ApiProperty.java
@@ -36,6 +38,7 @@ C:\Users\rodri\Desenvolvimento\new_workspace_sts4\comercial-api\src\main\java\br
 C:\Users\rodri\Desenvolvimento\new_workspace_sts4\comercial-api\src\main\java\br\com\rcv\comercial\ComercialApiApplication.java
 C:\Users\rodri\Desenvolvimento\new_workspace_sts4\comercial-api\src\main\java\br\com\rcv\comercial\repository\lancamento\LancamentoRepositoryImpl.java
 C:\Users\rodri\Desenvolvimento\new_workspace_sts4\comercial-api\src\main\java\br\com\rcv\comercial\service\exception\PessoaInexistenteOuInativaException.java
+C:\Users\rodri\Desenvolvimento\new_workspace_sts4\comercial-api\src\main\java\module-info.java
 C:\Users\rodri\Desenvolvimento\new_workspace_sts4\comercial-api\src\main\java\br\com\rcv\comercial\dto\LancamentoEstatisticaCategoria.java
 C:\Users\rodri\Desenvolvimento\new_workspace_sts4\comercial-api\src\main\java\br\com\rcv\comercial\repository\pessoa\PessoaRepositoryImpl.java
 C:\Users\rodri\Desenvolvimento\new_workspace_sts4\comercial-api\src\main\java\br\com\rcv\comercial\controller\ComercialResponseExceptionHandler.java

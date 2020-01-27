@@ -1,14 +1,21 @@
 package br.com.rcv.comercial.model;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Transient;
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 public class Pessoa {
@@ -25,6 +32,11 @@ public class Pessoa {
 	
 	@NotNull
 	private Boolean ativo;
+	
+	@JsonIgnoreProperties("pessoa")
+	@Valid
+	@OneToMany(mappedBy = "pessoa", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	private List<Contato> contatos;
 
 	public Long getId() {
 		return id;
@@ -49,6 +61,13 @@ public class Pessoa {
 	}
 	public void setAtivo(Boolean ativo) {
 		this.ativo = ativo;
+	}
+		
+	public List<Contato> getContatos() {
+		return contatos;
+	}
+	public void setContatos(List<Contato> contatos) {
+		this.contatos = contatos;
 	}
 	
 	@Transient
