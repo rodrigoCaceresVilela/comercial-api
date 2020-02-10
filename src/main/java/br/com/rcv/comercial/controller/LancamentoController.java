@@ -1,11 +1,16 @@
 package br.com.rcv.comercial.controller;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.net.URI;
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+
 import javax.validation.Valid;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
@@ -27,8 +32,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.server.ResponseStatusException;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+
 import br.com.rcv.comercial.controller.ComercialResponseExceptionHandler.Erro;
 import br.com.rcv.comercial.dto.LancamentoEstatisticaCategoria;
 import br.com.rcv.comercial.dto.LancamentoEstatisticaDia;
@@ -51,6 +58,25 @@ public class LancamentoController {
 	
 	@Autowired
 	private LancamentoService lancamentoService;
+	
+	/**
+	 * 
+	 * Endpoint para receber arquivo e gravar na pasta do servidor
+	 * 
+	 * @param anexo
+	 * @return HttpStatus
+	 * @throws IOException
+	 */
+	@PostMapping("/anexo")
+	@PreAuthorize("hasAuthority('ROLE_CADASTRAR_LANCAMENTO') and #oauth2.hasScope('write')")
+	public HttpStatus uploadAnexo(@RequestParam MultipartFile anexo) throws IOException {
+		OutputStream out = new FileOutputStream("C:/Users/rodrigo.caceres/Desktop/anexo--" + anexo.getOriginalFilename());
+		
+		out.write(anexo.getBytes());
+		out.close();
+		
+		return HttpStatus.OK;
+	}
 	
 	@GetMapping("/estatisticas/por-categoria")
 	@PreAuthorize("hasAuthority('ROLE_PESQUISAR_LANCAMENTO') and #oauth2.hasScope('read')")

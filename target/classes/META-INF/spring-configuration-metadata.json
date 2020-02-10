@@ -9,26 +9,27 @@
       "name": "comercialapi.cors-origin",
       "type": "br.com.rcv.comercial.config.property.ApiProperty$CorsOrigin",
       "sourceType": "br.com.rcv.comercial.config.property.ApiProperty",
-      "sourceMethod": "public br.com.rcv.comercial.config.property.ApiProperty.CorsOrigin getCorsOrigin() "
+      "sourceMethod": "getCorsOrigin()"
     },
     {
       "name": "comercialapi.mail",
       "type": "br.com.rcv.comercial.config.property.ApiProperty$Mail",
       "sourceType": "br.com.rcv.comercial.config.property.ApiProperty",
-      "sourceMethod": "public br.com.rcv.comercial.config.property.ApiProperty.Mail getMail() "
+      "sourceMethod": "getMail()"
     },
     {
       "name": "comercialapi.seguranca",
       "type": "br.com.rcv.comercial.config.property.ApiProperty$Seguranca",
       "sourceType": "br.com.rcv.comercial.config.property.ApiProperty",
-      "sourceMethod": "public br.com.rcv.comercial.config.property.ApiProperty.Seguranca getSeguranca() "
+      "sourceMethod": "getSeguranca()"
     }
   ],
   "properties": [
     {
       "name": "comercialapi.cors-origin.origin-permitida",
       "type": "java.lang.String",
-      "sourceType": "br.com.rcv.comercial.config.property.ApiProperty$CorsOrigin"
+      "sourceType": "br.com.rcv.comercial.config.property.ApiProperty$CorsOrigin",
+      "defaultValue": "http:\/\/localhost:8000"
     },
     {
       "name": "comercialapi.mail.host",
@@ -53,7 +54,8 @@
     {
       "name": "comercialapi.seguranca.enable-https",
       "type": "java.lang.Boolean",
-      "sourceType": "br.com.rcv.comercial.config.property.ApiProperty$Seguranca"
+      "sourceType": "br.com.rcv.comercial.config.property.ApiProperty$Seguranca",
+      "defaultValue": false
     }
   ],
   "hints": []
